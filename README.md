@@ -3,19 +3,11 @@
 [![Build Status](https://travis-ci.com/coglinev3/ansible-common.svg?branch=master)](https://travis-ci.com/coglinev3/ansible-common) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/coglinev3/ansible-common) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/coglinev3/ansible-common/master/LICENSE)
 
 Setup defaults (Ansible module dependencies, software packages) for every supported Linux distribution:
-* Alpine Linux 3.9,
-* Alpine Linux 3.10,
-* Alpine Linux 3.11,
-* Alpine Linux 3.12,
 * Debian 8 (Jessie),
 * Debian 9 (Stretch),
 * Debian 10 (Buster),
 * Enterprise Linux 7, 
 * Enterprise Linux 8, 
-* Fedora 32,
-* Fedora 33,
-* Ubuntu 14.04 LTS (Trusty Tahr),
-* Ubuntu 16.04 LTS (Xenial Xerus),
 * Ubuntu 18.04 LTS (Bionic Beaver) and
 * Ubuntu 20.04 LTS (Focal Fossa).
 
