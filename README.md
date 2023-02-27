@@ -14,8 +14,9 @@ Setup defaults (Ansible module dependencies, software packages) for every suppor
 * Enterprise Linux 7, 
 * Enterprise Linux 8, 
 * Enterprise Linux 9, 
-* Ubuntu 18.04 LTS (Bionic Beaver) and
-* Ubuntu 20.04 LTS (Focal Fossa).
+* Ubuntu 18.04 LTS (Bionic Beaver),
+* Ubuntu 20.04 LTS (Focal Fossa) and
+* Ubuntu 22.04 LTS (Jammy Jellyfish).
 
 This role is designed to run on every system as a initial setup. On the one hand, essential packages for Ansible modules and, on the other hand, standard packages for each Linux system are installed. Since each system administrator uses other Ansible modules, they can be defined using the `essential_packages` variable itself. The same applies to the standard packages. Because each system administrator or company has its own preferences for the packages to install on each system, those packages can be specified with the variable `common_packages`.
 
