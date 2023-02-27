@@ -12,6 +12,7 @@ Setup defaults (Ansible module dependencies, software packages) for every suppor
 * Debian 10 (Buster),
 * Enterprise Linux 7, 
 * Enterprise Linux 8, 
+* Enterprise Linux 9, 
 * Ubuntu 18.04 LTS (Bionic Beaver) and
 * Ubuntu 20.04 LTS (Focal Fossa).
 

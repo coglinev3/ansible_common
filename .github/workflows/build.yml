@@ -53,7 +53,9 @@ jobs:
             distro_cmd: /sbin/init
           - distro_version: 'alpine-3.17'
             distro_cmd: /sbin/init
+          - distro_version: 'centos-7'
           - distro_version: 'almalinux-8'
+          - distro_version: 'almalinux-9'
           - distro_version: 'debian-10'
             distro_cmd: /bin/systemd
           - distro_version: 'debian-11'
