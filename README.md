@@ -10,6 +10,7 @@ Setup defaults (Ansible module dependencies, software packages) for every suppor
 * Debian 8 (Jessie),
 * Debian 9 (Stretch),
 * Debian 10 (Buster),
+* Debian 11 (Bullseye),
 * Enterprise Linux 7, 
 * Enterprise Linux 8, 
 * Enterprise Linux 9, 
