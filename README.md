@@ -1,6 +1,6 @@
 # Ansible Role: ansible-common
 
-[![Build Status](https://travis-ci.com/coglinev3/ansible-common.svg?branch=master)](https://travis-ci.com/coglinev3/ansible-common) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/coglinev3/ansible-common) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/coglinev3/ansible-common/master/LICENSE)
+[![Build](https://github.com/coglinev3/ansible_common/actions/workflows/build.yml/badge.svg)](https://github.com/coglinev3/ansible_common/actions/workflows/build.yml) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/coglinev3/ansible-common) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/coglinev3/ansible-common/master/LICENSE)
 
 Setup defaults (Ansible module dependencies, software packages) for every supported Linux distribution:
 * Alpine Linux 3.14,
@@ -14,6 +14,10 @@ Setup defaults (Ansible module dependencies, software packages) for every suppor
 * Enterprise Linux 7, 
 * Enterprise Linux 8, 
 * Enterprise Linux 9, 
+* Fedora 34,
+* Fedora 35,
+* Fedora 36,
+* Fedora 37,
 * Ubuntu 18.04 LTS (Bionic Beaver),
 * Ubuntu 20.04 LTS (Focal Fossa) and
 * Ubuntu 22.04 LTS (Jammy Jellyfish).
