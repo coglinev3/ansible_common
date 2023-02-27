@@ -3,7 +3,20 @@
 
 - name: Verify
   hosts: all
+  gather_facts: true
   tasks:
-  - name: Example assertion
-    assert:
-      that: true
+    - name: "Log in as User ansible and execute git --version"
+      become: true
+      become_user: ansible
+      ansible.builtin.command: git --version
+      environment:
+        PATH: /usr/local/bin:/bin:/usr/bin
+      changed_when: false
+      register: git_version
+
+    - name: Check if git is installed correctly.
+      ansible.builtin.assert:
+        that:
+          - git_version.rc == 0
+        fail_msg: "Git not installed properly"
+        success_msg: "Role works fine, {{ git_version.stdout }} installed correctly"

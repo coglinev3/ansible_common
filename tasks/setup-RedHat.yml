@@ -10,7 +10,7 @@
 #-----------------------------------------------------------------------------
 
 - name: "Fedora: install dnf-automatic"
-  dnf:
+  ansible.builtin.dnf:
     name: dnf-automatic
   register: install_dnf_automatic
   until: install_dnf_automatic.rc == 0
@@ -21,7 +21,7 @@
 
 # The EPEL Repository should be installed on all EL Systems
 - name: "RedHat: Install EPEL Repository"
-  yum:
+  ansible.builtin.yum:
     name: epel-release
     state: present
     update_cache: "yes"
@@ -30,7 +30,7 @@
     - install
 
 - name: "RedHat: Install essential packages for some Ansible modules"
-  yum:
+  ansible.builtin.yum:
     name: "{{ essential_packages }}"
     state: "{{ essential_packages_state }}"
     update_cache: "yes"
@@ -39,14 +39,14 @@
     - install
 
 - name: "RedHat: Upgrade all packages to the latest version"
-  yum:
+  ansible.builtin.yum:
     name: "*"
     state: latest
     update_cache: "{{ common_packages_update_cache | default('false') }}"
   when: common_packages_update_all
 
 - name: "RedHat: Install common packages for every Linux distribution"
-  yum:
+  ansible.builtin.yum:
     name: "{{ common_packages }}"
     state: "{{ common_packages_state }}"
   when: not ansible_check_mode

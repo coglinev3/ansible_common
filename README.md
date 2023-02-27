@@ -1,27 +1,30 @@
-# Ansible Role: ansible-common
+# Ansible Role: ansible_common
 
-[![Build Status](https://travis-ci.com/coglinev3/ansible-common.svg?branch=master)](https://travis-ci.com/coglinev3/ansible-common) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/coglinev3/ansible-common) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/coglinev3/ansible-common/master/LICENSE)
+[![Build](https://github.com/coglinev3/ansible_common/actions/workflows/build.yml/badge.svg)](https://github.com/coglinev3/ansible_common/actions/workflows/build.yml) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/coglinev3/ansible-common) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://raw.githubusercontent.com/coglinev3/ansible-common/master/LICENSE)
 
 Setup defaults (Ansible module dependencies, software packages) for every supported Linux distribution:
-* Alpine Linux 3.9,
-* Alpine Linux 3.10,
-* Alpine Linux 3.11,
-* Alpine Linux 3.12,
+* Alpine Linux 3.14,
+* Alpine Linux 3.15,
+* Alpine Linux 3.16,
+* Alpine Linux 3.17,
 * Debian 8 (Jessie),
 * Debian 9 (Stretch),
 * Debian 10 (Buster),
+* Debian 11 (Bullseye),
 * Enterprise Linux 7, 
 * Enterprise Linux 8, 
-* Fedora 32,
-* Fedora 33,
-* Ubuntu 14.04 LTS (Trusty Tahr),
-* Ubuntu 16.04 LTS (Xenial Xerus),
-* Ubuntu 18.04 LTS (Bionic Beaver) and
-* Ubuntu 20.04 LTS (Focal Fossa).
+* Enterprise Linux 9, 
+* Fedora 34,
+* Fedora 35,
+* Fedora 36,
+* Fedora 37,
+* Ubuntu 18.04 LTS (Bionic Beaver),
+* Ubuntu 20.04 LTS (Focal Fossa) and
+* Ubuntu 22.04 LTS (Jammy Jellyfish).
 
 This role is designed to run on every system as a initial setup. On the one hand, essential packages for Ansible modules and, on the other hand, standard packages for each Linux system are installed. Since each system administrator uses other Ansible modules, they can be defined using the `essential_packages` variable itself. The same applies to the standard packages. Because each system administrator or company has its own preferences for the packages to install on each system, those packages can be specified with the variable `common_packages`.
 
-The role was tested with Docker on Travis-CI and with this [Multi-VM Vagrant environment](https://ansible-development.readthedocs.io/ "Vagrant environment for Developing and Testing Ansible Roles").
+The role was tested with [Ansible Molecule](https://molecule.readthedocs.io/en/latest/ "Ansible Molecule") and with this [Multi-VM Vagrant environment](https://ansible-development.readthedocs.io/ "Vagrant environment for Developing and Testing Ansible Roles").
 
 ## Requirements
 
@@ -83,12 +86,12 @@ None.
 
 ```yml
 ---
-# file: roles/ansible-common/tests/test.yml
+# file: roles/ansible_common/tests/test.yml
 
 - hosts: all
   become: true
   roles:
-    - { role: coglinev3.ansible-common }
+    - { role: coglinev3.ansible_common }
 ```
 
 Using a pre_tasks statement on Ubuntu systems can ensure that the python-minimal or python3-minimal package is installed. Thanks for discussion on [gist.github.com](https://gist.github.com/gwillem/4ba393dceb55e5ae276a87300f6b8e6f "gwillem/ansible-bootstrap-ubuntu-16.04.yml")
@@ -110,12 +113,12 @@ Using a pre_tasks statement on Ubuntu systems can ensure that the python-minimal
 - hosts: all
   become: true
   roles:
-    - { role: coglinev3.ansible-common }
+    - { role: coglinev3.ansible_common }
 ```
 
 ## Version
 
-Release: 1.8.0
+Release: 1.9.0
 
 ## License
 
@@ -123,4 +126,4 @@ BSD
 
 ## Author Information
 
-This Ansible Role was created in 2018, by Cogline.v3.
+Copyright &copy; 2023 Cogline.v3.

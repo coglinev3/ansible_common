@@ -2,7 +2,7 @@
 # file: roles/ansible-common/tasks/setup-Debian.yml
 
 - name: "Debian: Upgrade all packages to the latest version"
-  apt:
+  ansible.builtin.apt:
     name: "*"
     state: latest
     update_cache: "{{ common_packages_update_cache | default('false') }}"
@@ -10,7 +10,7 @@
 
 
 - name: "Debian: Install essential packages for some Ansible modules"
-  apt:
+  ansible.builtin.apt:
     name: "{{ essential_packages }}"
     state: "{{ essential_packages_state }}"
     update_cache: "yes"
@@ -19,7 +19,7 @@
     - install
 
 - name: "Debian: Install common packages for every Linux distribution"
-  apt:
+  ansible.builtin.apt:
     name: "{{ common_packages }}"
     state: "{{ common_packages_state }}"
   when: not ansible_check_mode

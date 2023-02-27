@@ -2,13 +2,13 @@
 # file: roles/ansible-common/tasks/setup-Debian.yml
 
 - name: "Alpine: Upgrade all packages to the latest version"
-  apk:
+  community.general.apk:
     upgrade: "yes"
     update_cache: "{{ common_packages_update_cache | default('false') }}"
   when: common_packages_update_all
 
 - name: "Alpine: Install essential packages for some Ansible modules"
-  apk:
+  community.general.apk:
     name: "{{ essential_packages }}"
     state: "{{ essential_packages_state }}"
     update_cache: "yes"
@@ -17,7 +17,7 @@
     - install
 
 - name: "Alpine: Install common packages for every Linux distribution"
-  apk:
+  community.general.apk:
     name: "{{ common_packages }}"
     state: "{{ common_packages_state }}"
   when: not ansible_check_mode
