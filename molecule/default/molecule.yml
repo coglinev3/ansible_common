@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: docker.io/${MOLECULE_DISTRO:-coglinev3/ansible}:${MOLECULE_DISTRO_VERSION:-centos-7}
+    image: docker.io/${MOLECULE_DISTRO:-coglinev3/ansible}:${MOLECULE_DISTRO_VERSION:-alpine-3.17}
     pre_build_image: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
