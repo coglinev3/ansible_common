@@ -118,7 +118,7 @@ Using a pre_tasks statement on Ubuntu systems can ensure that the python-minimal
 
 ## Version
 
-Release: 1.8.0
+Release: 1.9.0
 
 ## License
 
