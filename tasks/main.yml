@@ -2,7 +2,7 @@
 # file: roles/ansible-common/tasks/main.yml
 
 - name: Gather os specific variables
-  include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - files:
         - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
@@ -12,5 +12,5 @@
       skip: true
   tags: vars
 
-# Setup/install tasks.
-- include_tasks: "setup-{{ ansible_os_family }}.yml"
+- name: Setup/Install tasks.
+  ansible.builtin.include_tasks: "setup-{{ ansible_os_family }}.yml"
