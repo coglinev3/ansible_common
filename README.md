@@ -16,6 +16,7 @@ Setup defaults (Ansible module dependencies, software packages) for every suppor
 * Fedora 35,
 * Fedora 36,
 * Fedora 37,
+* Fedora 38,
 * Ubuntu 18.04 LTS (Bionic Beaver),
 * Ubuntu 20.04 LTS (Focal Fossa) and
 * Ubuntu 22.04 LTS (Jammy Jellyfish).
