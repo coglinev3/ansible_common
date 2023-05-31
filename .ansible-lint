@@ -2,4 +2,3 @@ skip_list:
   - experimental
   - package-latest
   - command-instead-of-module
-  - schema[meta]

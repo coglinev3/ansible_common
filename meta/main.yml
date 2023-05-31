@@ -13,7 +13,9 @@ galaxy_info:
   # github_branch:
   platforms:
     - name: Alpine
-    - name: "Amazon Linux 2023"
+    - name: Amazon Linux
+      versions:
+        - "2023"
     - name: EL
       versions:
         - "9"
