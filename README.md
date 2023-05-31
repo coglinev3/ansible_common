@@ -7,8 +7,7 @@ Setup defaults (Ansible module dependencies, software packages) for every suppor
 * Alpine Linux 3.15,
 * Alpine Linux 3.16,
 * Alpine Linux 3.17,
-* Debian 8 (Jessie),
-* Debian 9 (Stretch),
+* Amazon Linux 2023,
 * Debian 10 (Buster),
 * Debian 11 (Bullseye),
 * Enterprise Linux 7, 
@@ -18,6 +17,7 @@ Setup defaults (Ansible module dependencies, software packages) for every suppor
 * Fedora 35,
 * Fedora 36,
 * Fedora 37,
+* Fedora 38,
 * Ubuntu 18.04 LTS (Bionic Beaver),
 * Ubuntu 20.04 LTS (Focal Fossa) and
 * Ubuntu 22.04 LTS (Jammy Jellyfish).
@@ -118,7 +118,7 @@ Using a pre_tasks statement on Ubuntu systems can ensure that the python-minimal
 
 ## Version
 
-Release: 1.9.0
+Release: 1.10.0
 
 ## License
 

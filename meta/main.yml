@@ -13,8 +13,7 @@ galaxy_info:
   # github_branch:
   platforms:
     - name: Alpine
-      versions:
-        - any
+    - name: "Amazon Linux 2023"
     - name: EL
       versions:
         - "9"
@@ -27,7 +26,6 @@ galaxy_info:
         - jammy
     - name: Debian
       versions:
-        - stretch
         - buster
         - bullseye
     - name: Fedora
@@ -36,6 +34,7 @@ galaxy_info:
         - "35"
         - "36"
         - "37"
+        - "38"
 
   galaxy_tags:
     - ansible

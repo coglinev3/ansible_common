@@ -23,13 +23,8 @@ jobs:
         with:
           path: 'coglinev3.ansible_common'
 
-      - name: Set up Python 3.
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
       - name: Install test dependencies.
-        run: python3 -m pip install --upgrade --user pytest ansible yamllint 'ansible-lint==6.12.2'
+        run: python3 -m pip install --user ansible ansible-lint
 
       - name: Lint code with yamllint. 
         run: yamllint .
@@ -53,11 +48,10 @@ jobs:
             distro_cmd: /sbin/init
           - distro_version: 'alpine-3.17'
             distro_cmd: /sbin/init
+          - distro_version: 'amazonlinux-2023'
           - distro_version: 'centos-7'
           - distro_version: 'almalinux-8'
           - distro_version: 'almalinux-9'
-          - distro_version: 'debian-9'
-            distro_cmd: /bin/systemd
           - distro_version: 'debian-10'
             distro_cmd: /bin/systemd
           - distro_version: 'debian-11'
@@ -66,6 +60,7 @@ jobs:
           - distro_version: 'fedora-35'
           - distro_version: 'fedora-36'
           - distro_version: 'fedora-37'
+          - distro_version: 'fedora-38'
           - distro_version: 'ubuntu-18.04'
             distro_cmd: /bin/systemd
           - distro_version: 'ubuntu-20.04'
@@ -79,24 +74,12 @@ jobs:
         with:
           path: 'coglinev3.ansible_common'
 
-      - name: Set up Python 3.
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install python3-pip python3-testresources libssl-dev
-
-      - name: Upgrade Python wheel
-        run: python3 -m pip install --upgrade --user wheel
-
-      - name: Upgrade Python setuptools
-        run: python3 -m pip install --upgrade --user setuptools
-
-      - name: Install Ansible Molecule with docker driver and lint tools
-        run: python3 -m pip install --upgrade --user pytest ansible yamllint "ansible-lint==6.12.2" "molecule[docker,lint]"
+      - name: Install Molecule
+        run: >-
+          python3 -m pip install --user "urllib3<2"
+          ansible
+          molecule
+          molecule-plugins[docker]
 
       - name: Configure Ansible
         run: |
